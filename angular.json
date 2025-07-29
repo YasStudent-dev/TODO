@@ -5,8 +5,25 @@
   "projects": {
     "app": {
       "projectType": "application",
-      "schematics": {},
-      "root": "",
+      "schematics": {
+        "@angular/material:material": {
+          "theme": "azure-blue",
+          "typography": true,
+          "animations": false
+        },
+        "@angular/cli:component": {
+          "skipTests": true,
+          "inlineStyle": false,
+          "inlineTemplate": false,
+          "style": "css"
+        },
+        "@angular:application": {
+          "strict": true,
+          "routing": false,
+          "style": "css"
+        }
+      },
+      "root": ".",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -30,15 +47,15 @@
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
-			"prerender": false,
+			      "prerender": true,
             "ssr": {
               "entry": "src/server.ts"
             }
           },
           "configurations": {
             "production": {
-              "sourceMap": true,
-              // "optimization": true,
+              "optimization": true,
+              "sourceMap": false,
               "budgets": [
                 {
                   "type": "initial",
