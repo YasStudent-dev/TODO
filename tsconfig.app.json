@@ -1,10 +1,7 @@
 {
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
-		"sourceMap": false,
 		"removeComments": true,
-		"outDir": "./out-tsc/app",
-		"types": ["node"]
-	},
-	"exclude": ["node_modules"]
+		"outDir": "./out-tsc/app"
+	}
 }

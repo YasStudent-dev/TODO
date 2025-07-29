@@ -18,7 +18,6 @@
           "style": "css"
         },
         "@angular:application": {
-          "strict": true,
           "routing": false,
           "style": "css"
         }
@@ -47,14 +46,16 @@
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
-			      "prerender": true,
+			      "prerender": false,
             "ssr": {
               "entry": "src/server.ts"
             }
           },
           "configurations": {
             "production": {
+              "aot": true,
               "optimization": true,
+              "extractLicenses": true,
               "sourceMap": false,
               "budgets": [
                 {
@@ -71,6 +72,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "aot": false,
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,

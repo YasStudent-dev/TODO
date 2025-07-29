@@ -21,7 +21,7 @@ import { DEFAULT_LANGUAGE, LANGUAGE_OPTIONS } from '@app/constants/language.cons
 	imports: [CommonModule, FormsModule, MatToolbarModule, MatFormFieldModule, MatSelectModule, TranslatePipe]
 })
 export class TopNavbarComponent {
-	public logoPath = "/assets/icon.svg";
+	public logoPath = "/assets/logo.svg";
 	public languageOptions = LANGUAGE_OPTIONS;
 
 	public selectedLanguage!: LanguageCodeOption;
