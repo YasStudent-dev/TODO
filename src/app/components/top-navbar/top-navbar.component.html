@@ -1,0 +1,18 @@
+<nav class="top-navbar">
+	<mat-toolbar class="top-navbar__toolbar">
+		<div class="top-navbar__logo-container">
+			<img class="top-navbar__logo" [src]="logoPath" alt="Angular Logo"/>
+			<span class="top-navbar__logo-label">Angular</span>
+		</div>
+
+		<div class="top-navbar__language-selector">
+			<mat-form-field class="top-navbar__language-selector-form-field">
+				<mat-select [value]="selectedLanguage" [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
+					<mat-option *ngFor="let languageOption of languageOptions" [value]="languageOption">
+						{{ getLanguageOptionTranslationKey(languageOption) | translate }}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+	</mat-toolbar>
+</nav>

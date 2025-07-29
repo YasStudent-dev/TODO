@@ -1,0 +1,36 @@
+{
+    "app": {
+        "top-navbar": {
+            "selector": {
+                "language": {
+                    "options": {
+                        "en": "Engels",
+                        "nl": "Nederlands"
+                    }
+                }
+            }
+        },
+        "todo": {
+            "title": "TODO, maak je eigen taken",
+            "newItem": {
+                "placeholder": "Bescrijving ..."
+            },
+            "filters": {
+                "status": {
+                    "options": {
+                        "all": "Alle",
+                        "pending": "Onvoltooid",
+                        "done": "Voltooid"
+                    }
+                }
+            },
+            "listItem": {
+                "actions": {
+                    "edit": "Bewerk",
+                    "save": "Opslaan",
+                    "delete": "Verwijder"
+                }
+            }
+        }
+    }
+}

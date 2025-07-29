@@ -1,0 +1,19 @@
+<div class="todo__list-item-container">
+    <div class="todo__list-item-checkbox-wrapper">
+        <input type="checkbox" class="todo__checkbox" [checked]="item.isDone" [disabled]="item.isEditing" (change)="onToggleItemDone(item)"/>
+    </div>
+    <div class="todo__list-item-description-wrapper">
+        <input type="text" class="todo__description-edit-input" *ngIf="item.isEditing" [(ngModel)]="item.description"/>
+
+        <span class="todo__description-text" *ngIf="!item.isEditing && !item.isDone">{{ item.description }}</span>
+        <span class="todo__description-text" *ngIf="!item.isEditing && item.isDone"><s>{{ item.description }}</s></span>
+    </div>
+
+    <div class="todo__list-item-actions-wrapper">
+        <div class="todo__list-item-actions-buttons">
+            <button *ngIf="!item.isEditing" (click)="onStartItemEdit(item)">{{ getItemActionTranslationKey("edit") | translate }}</button>
+            <button *ngIf="!item.isEditing" (click)="onDeleteItem(item)">{{ getItemActionTranslationKey("delete") | translate }}</button>
+            <button *ngIf="item.isEditing" (click)="onEndItemEdit(item)">{{ getItemActionTranslationKey("save") | translate }}</button>
+        </div>
+    </div>
+</div>

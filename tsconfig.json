@@ -1,34 +1,36 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "ES2022",
-    "module": "preserve"
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "typeCheckHostBindings": true,
-    "strictTemplates": true
-  },
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"strict": true,
+		"target": "ES2022",
+		"module": "preserve",
+		"moduleResolution": "bundler",
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"incremental": true,
+		// "sourceMap": true,
+		"types": [],
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"baseUrl": "./src",
+		"paths": {
+			"@app/*": ["app/*"],
+			"@env": ["environments/environment"]
+		},
+		"outDir": "./dist"
+	},
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"typeCheckHostBindings": true,
+		"strictTemplates": true
+	},
+	"include": ["src/**/*.ts"]
 }

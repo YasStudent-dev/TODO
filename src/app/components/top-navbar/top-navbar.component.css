@@ -1,0 +1,36 @@
+.top-navbar {
+    width: 90%;
+    min-width: 367px;
+    max-width: 1030px;
+	margin: 0px auto;
+    margin-bottom: 100px;
+}
+
+.top-navbar__toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    padding-top: 40px;
+}
+
+/* ----------------------------------------------- Top navbar logo ----------------------------------------------------- */
+
+.top-navbar__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.top-navbar__logo {
+	height: 80px;
+}
+
+.top-navbar__logo-label {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+/* ----------------------------------------------- Top navbar language selector -------------------------------------------- */
+
+.top-navbar__language-selector-form-field {
+	width: 145px;
+}

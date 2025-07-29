@@ -1,0 +1,36 @@
+{
+    "app": {
+        "top-navbar": {
+            "selector": {
+                "language": {
+                    "options": {
+                        "en": "English",
+                        "nl": "Dutch"
+                    }
+                }
+            }
+        },
+        "todo": {
+            "title": "TODO, create your own tasks",
+            "newItem": {
+                "placeholder": "Description..."
+            },
+            "filters": {
+                "status": {
+                    "options": {
+                        "all": "All",
+                        "pending": "Pending",
+                        "done": "Done"
+                    }
+                }
+            },
+            "listItem": {
+                "actions": {
+                    "edit": "Edit",
+                    "save": "Save",
+                    "delete": "Delete"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="todo">
+	<h1 class="todo__title">{{ 'app.todo.title' | translate }}</h1>
+
+    <div class="todo__actions">
+		<mat-form-field class="todo__add-input-form-field">
+			<input matInput class="todo__add-input" placeholder="{{ 'app.todo.newItem.placeholder' | translate }}" [(ngModel)]="newTodoItemDescription" #newTodoItemDescriptionInput="ngModel" required minlength="5"/>
+		</mat-form-field>
+
+		<button mat-flat-button type="button" class="todo__add-button" [disabled]="newTodoItemDescriptionInput.invalid" (click)="onAddItem()">+</button>
+
+		<mat-form-field class="todo__status-filter-form-field">
+			<mat-select [(ngModel)]="selectedStatusFilter" (selectionChange)="onStatusFilterChange()">
+				<mat-option *ngFor="let statusFilterOption of statusFilterOptions" [value]="statusFilterOption">
+					{{ getStatusFilterOptionTranslationKey(statusFilterOption) | translate }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+    </div>
+
+	<div class="todo__list">
+		<ul class="todo__list-items">
+			<li class="todo__list-item" *ngFor="let todoItem of (todoItemsList$ | async)">
+				<app-todo-item [item]="todoItem"></app-todo-item>
+			</li>
+		</ul>
+	</div>
+</div>

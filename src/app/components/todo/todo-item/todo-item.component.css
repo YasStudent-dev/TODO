@@ -1,0 +1,66 @@
+.todo__list-item-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+/* ----------------------------------------------- Todo item toggle -------------------------------------------- */
+
+.todo__list-item-checkbox-wrapper {
+    width: 40px;
+}
+
+.todo__checkbox {
+    height: 21px;
+    width: 21px;
+    cursor: pointer;
+    accent-color:  royalblue;
+}
+
+/* ----------------------------------------------- Todo item description ------------------------------------------- */
+
+.todo__list-item-description-wrapper {
+    flex: 1;
+    font-size: 30px;
+    word-wrap: anywhere;
+    word-break: break-word;
+}
+
+.todo__description-edit-input {
+    width: 100%;
+    padding: 7px;
+    font-size: 23px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+.todo__description-text {
+    line-height: 35px;
+}
+
+/* ----------------------------------------------- Todo item actions ----------------------------------------------- */
+
+.todo__list-item-actions-wrapper {
+    width: 170px;
+}
+
+.todo__list-item-actions-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.todo__list-item-actions-buttons button {
+    width: 50%;
+    padding: 15px;
+    background-color: #e0e2ec;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.todo__list-item-actions-buttons button:hover {
+    background-color: #d0d2db;
+}

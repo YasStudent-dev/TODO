@@ -1,0 +1,53 @@
+.todo {
+    width: 90%;
+    min-width: 367px;
+    max-width: 1025px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.todo__title {
+    text-align: center;
+    font-size: 41px;
+    margin-bottom: 70px;
+    line-height: 50px;
+}
+
+/* ----------------------------------------------- Todo actions -------------------------------------------- */
+
+.todo__actions {
+    display: flex;
+}
+
+.todo__add-input-form-field {
+    width: 90%;
+    max-width: 795px;
+    margin-right: 4px;
+}
+
+.todo__add-input {
+    font-size: 20px;
+}
+
+.todo__add-button {
+    border-radius: 4px;
+    height: 57px;
+    background-color: #e0e2ec;
+    font-size: 34px;
+    margin-right: 15px;
+}
+
+.todo__status-filter-form-field {
+    width: 150px;
+}
+
+/* ----------------------------------------------- Todo list -------------------------------------------- */
+
+.todo__list-items {
+    height: 608px;
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: scroll;
+}
