@@ -1,5 +1,9 @@
 {
     "app": {
+        "metadata": {
+            "title": "Angular app",
+            "description": "This is an Angular app"
+        },
         "top-navbar": {
             "selector": {
                 "language": {
@@ -11,6 +15,10 @@
             }
         },
         "todo": {
+            "metadata": {
+                "title": "Angular TODO app",
+                "description": "Een responsief Angular TODO applicatie met dynamische taal wisseling en inline editing met gebruik van NGXS, NGXS storage-plugin (localstorage), ngx-translate, Angular material en Angular Universal voor verbetering van prestaties en SEO."
+            },
             "title": "TODO, maak je eigen taken",
             "newItem": {
                 "placeholder": "Bescrijving ..."

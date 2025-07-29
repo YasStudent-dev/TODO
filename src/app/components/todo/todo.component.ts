@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
-import { TranslatePipe } from '@ngx-translate/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { StatusFilterOption, TodoItem } from '@app/models/todo.model';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { TodoSelectors } from '@app/store/todo/todo.selector';
 import { AddItem, UpdateFilter } from '@app/store/todo/todo.actions';
 import { STATUS_FILTER_OPTIONS } from '@app/constants/todo.constants';
@@ -32,12 +33,17 @@ export class TodoComponent {
 
   	private currentStatusFilterSubscription!: Subscription;
 	
-	constructor(private store: Store) {
+	constructor(private store: Store, private translate: TranslateService, private title: Title, private meta: Meta)  {
 		this.currentStatusFilter$ = this.store.select(TodoSelectors.selectCurrentTodoStatusFilter);
 		this.todoItemsList$ = this.store.select(TodoSelectors.selectTodoItems);
 	}
 
 	ngOnInit() {
+		this.translate.get(['app.todo.metadata.title', 'app.todo.metadata.description']).subscribe((res: any) => {
+			this.title.setTitle(res['app.todo.metadata.title']);
+			this.meta.updateTag({ name: 'description', content: res['app.todo.metadata.description']});
+		});
+
 		this.currentStatusFilterSubscription = this.currentStatusFilter$.subscribe(currentStatusFilter => {
 			this.selectedStatusFilter = currentStatusFilter as StatusFilterOption;
 		});

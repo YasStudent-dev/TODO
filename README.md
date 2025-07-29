@@ -58,7 +58,14 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-an angular reuseable, modular and maintainable  todo app, using ngxs for statemanagement, angular universal for SSR and support multiplelangugaes using ngx translate.
+An responsive Angular TODO list app with dynamic language switching and inline editing using NGXS with storage-plugin for state management using localstorage, ngx-translate for multilanguage support, Angular material for responsive UI and Angular Universal for improved performance and SEO.
+
+ is reuseable, modular and maintainable using ngxs for statemanagement, angular universal for SSR and support multiplelangugaes using ngx translate.
 IMprovement suggestion:
 Using formgroups
 resetting filter for new tabs
+
+This is a responsive Angular TODO list app with dynamic langugae switching and inline editing using ngxs with storage plugin for state management and localstorage, ngx-translate for multilanguage support, angular material for responsive UI and angular universal for improved eperformance and SEO.
+
+
+"description": "A responsive Angular TODO list app with dynamic language switching and inline editing using NGXS with storage-plugin for state management using localstorage, ngx-translate for multilanguage support, Angular material for responsive UI and Angular Universal for improved performance and SEO."
