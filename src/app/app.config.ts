@@ -1,11 +1,10 @@
 import { NgxsModule } from '@ngxs/store';
-import { HttpClient } from '@angular/common/http';
 import { TodoState } from '@app/store/todo/todo.state';
 import { provideHttpClient } from '@angular/common/http';
+import { HttpClient, withFetch } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageState } from '@app/store/language/language.state';
 import { NgxsStoragePluginModule, StorageOption } from '@ngxs/storage-plugin';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { DEFAULT_LANGUAGE, LANGUAGE_STATE_NAME } from '@app/constants/language.constants';
@@ -17,8 +16,7 @@ export const appConfig: ApplicationConfig = {
 	providers: [
 		provideBrowserGlobalErrorListeners(),
 		provideZoneChangeDetection({ eventCoalescing: true }),
-		provideClientHydration(withEventReplay()),
-		provideHttpClient(),
+		provideHttpClient(withFetch()),
 		provideTranslateService({
 			loader: {
 				provide: TranslateLoader,
