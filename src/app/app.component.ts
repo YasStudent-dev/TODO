@@ -3,7 +3,6 @@ import { TopNavbarComponent } from '@app/components/top-navbar/top-navbar.compon
 import { TodoComponent } from '@app/components/todo/todo.component';
 import { Title, Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
-import { environment } from '@env';
 
 @Component({
     selector: 'app-root',
@@ -13,11 +12,7 @@ import { environment } from '@env';
 })
 export class AppComponent {
 
-	constructor(private translate: TranslateService, private title: Title, private meta: Meta) {
-        console.log("get env");
-        console.log(isDevMode());
-        console.log(environment.production);
-    }
+	constructor(private translate: TranslateService, private title: Title, private meta: Meta) {}
 
     onInit() {
         this.translate.get(['app.metadata.title', 'app.metadata.description']).subscribe((res: any) => {
