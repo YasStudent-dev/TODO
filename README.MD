@@ -9,14 +9,14 @@ The navigation bar contains of a logo and a language selector to dynamicly chang
 All data, language, filter and existing items are stored in and loaded from localstorage making the app working for multiple sessions/tabs.
 
 ## Framework and additional packages:
-Angular 20
-Typescript 5
-@angular/material
-@angular/ngxs
-@ngxs/storage-plugin
-@angular/ssr
-@ngx-translate/core
-@ngx-translate/http-loader
+* Angular 20
+* Typescript 5
+* @angular/material
+* @angular/ngxs
+* @ngxs/storage-plugin
+* @angular/ssr
+* @ngx-translate/core
+* @ngx-translate/http-loader
 
 ## Requirements:
 Node.js >= 20.11.1
