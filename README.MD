@@ -27,6 +27,6 @@ All language selector values, filter values and existing items are stored in and
 2. Move to cloned project root directory
 3. Install dependencies using "npm install"
 
-# Run app:
+* Run app:
 1. For build and run in development mode use "ng serve"
 2. For production first build app using "npm run buid:ssr" then run the app using "npm run serve:ssr:app"

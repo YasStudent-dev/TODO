@@ -1,4 +1,4 @@
-import { Component, isDevMode } from '@angular/core';
+import { Component } from '@angular/core';
 import { TopNavbarComponent } from '@app/components/top-navbar/top-navbar.component';
 import { TodoComponent } from '@app/components/todo/todo.component';
 import { Title, Meta } from '@angular/platform-browser';
