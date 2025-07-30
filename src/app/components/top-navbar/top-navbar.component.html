@@ -7,7 +7,7 @@
 
 		<div class="top-navbar__language-selector">
 			<mat-form-field class="top-navbar__language-selector-form-field">
-				<mat-select [value]="selectedLanguage" [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
+				<mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange()">
 					<mat-option *ngFor="let languageOption of languageOptions" [value]="languageOption">
 						{{ getLanguageOptionTranslationKey(languageOption) | translate }}
 					</mat-option>

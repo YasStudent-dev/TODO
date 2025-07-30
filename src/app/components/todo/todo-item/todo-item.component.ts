@@ -20,7 +20,7 @@ export class TodoItemComponent {
 	constructor(private store: Store) {}
 
 	public getItemActionTranslationKey(itemAction: ItemAction): string {
-        return `app.todo.listItem.actions.${itemAction}`;
+		return `app.todo.listItem.actions.${itemAction}`;
 	}
 
 	public onStartItemEdit(item: TodoItem): void {
