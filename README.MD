@@ -19,8 +19,8 @@ All data, language, filter and existing items are stored in and loaded from loca
 * @ngx-translate/http-loader
 
 ## Requirements:
-Node.js >= 20.11.1
-Npm >= 11.0.0
+* Node.js >= 20.11.1
+* Npm >= 11.0.0
 
 ## Installation:
 1 Clone the project
