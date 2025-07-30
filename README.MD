@@ -23,10 +23,10 @@ All language selector value, filter value and existing items are stored in and l
 * Npm >= 11.0.0
 
 ## Installation:
-1. 1 Clone the project
-2. 2 Move to cloned project root directory
-3. 3 Install dependencies using "npm install"
+1. Clone the project
+2. Move to cloned project root directory
+3. Install dependencies using "npm install"
 
 * Run app:
-1. 1 For build and run in development mode use "ng serve"
-2. 2 For production first build app using "npm run buid:ssr" then run the app using "npm run serve:ssr:app"
+1. For build and run in development mode use "ng serve"
+2. For production first build app using "npm run buid:ssr" then run the app using "npm run serve:ssr:app"
